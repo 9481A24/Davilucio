@@ -1,23 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi filho azulejista</title>
+  <meta name="description" content="Móveis planejados com design moderno, funcionalidade e acabamento impecável. Cozinhas, quartos, escritórios sob medida.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      font-size: 1.5em;
+      font-weight: bold;
+      z-index: 1000;
+      text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    main {
+      padding-top: 100px;
+      min-height: 100vh;
+      display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    /* Títulos centralizados e responsivos */
-    .titulos-pacotes {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; /* permite quebrar linha se faltar espaço */
-      gap: 20px; /* distancia entre os títulos */
-      margin-bottom: 50px;
-    }
-
+    /* Título Pacote Serviços grande e chamativo */
     .titulos-pacotes h1 {
-      font-size: clamp(2em, 6vw, 3em); /* cresce e diminui conforme tela */
-      margin: 0;
+      color: #fff;
       text-align: center;
+      font-size: clamp(2.5em, 6vw, 4em);
+      font-weight: bold;
+      margin: 30px 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
+    /* Pacote Básico organizado */
+    .pacote {
+      color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+      line-height: 1.6;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 10px;
+    }
+
+    .pacote h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .pacote ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .pacote ul li {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .pacote p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    /* Galeria */
     .galeria {
       width: 100%;
       max-width: 700px;
@@ -41,6 +106,7 @@
       transform: scale(1.02);
     }
 
+    /* Comentários */
     .comentarios-container {
       max-width: 700px;
       margin: 0 auto 80px;
@@ -96,6 +162,7 @@
       }
     }
 
+    /* Botão WhatsApp */
     .whatsapp-btn {
       position: fixed;
       bottom: 30px;
@@ -134,14 +201,8 @@
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 0.7;
-      }
-      100% {
-        transform: scale(1.8);
-        opacity: 0;
-      }
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.8); opacity: 0; }
     }
 
     .whatsapp-btn img {
@@ -149,8 +210,9 @@
       height: 38px;
     }
 
+    /* Rodapé */
     .rodape {
-      text-align: left;
+      text-align: center;
       padding: 15px 40px;
       background: rgba(0, 0, 0, 0.6);
       font-size: 1em;
@@ -164,34 +226,6 @@
       border-radius: 4px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-
-    /* CSS Pacote Básico */
-    .pacote {
-      max-width: 700px;
-      margin: 20px auto 40px;
-      padding: 20px;
-      background-color: rgba(0, 128, 0, 0.4);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      text-align: left;
-    }
-
-    .pacote h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-
-    .pacote ul li {
-      text-align: left;
-      font-size: 1.5em;
-      line-height: 2em;
-    }
-
-    .pacote p {
-      margin-top: 10px;
-      font-size: 1.4em;
-    }
   </style>
 </head>
 <body>
@@ -200,15 +234,14 @@
 
   <main>
 
-    <!-- Títulos Pacotes juntos e responsivos -->
+    <!-- Título Pacote Serviços -->
     <div class="titulos-pacotes">
-      <h1>Pacote Serviços</h1>
-      <h1>Maridos Aluguel</h1>
+      <h1>Pacote Serviços – Marido Aluguel</h1>
     </div>
 
-    <!-- Pacote Básico -->
-    <div class="pacote">
-      <h2>🔧 Pacote Básico – R$250/mês</h2>
+    <!-- Pacote Básico organizado -->
+    <section class="pacote">
+      <h2>Pacote Básico – R$250/mês</h2>
       <ul>
         <li>1 visita mensal (até 2 horas de serviços)</li>
         <li>Troca de lâmpadas e tomadas</li>
@@ -216,7 +249,7 @@
         <li>Ajustes simples em portas, janelas e móveis</li>
       </ul>
       <p>👉 Ideal para quem precisa de manutenção leve e periódica.</p>
-    </div>
+    </section>
 
     <!-- Galeria -->
     <div class="galeria">
@@ -250,6 +283,7 @@
         </div>
       </div>
     </div>
+
   </main>
 
   <!-- Botão WhatsApp -->
@@ -259,7 +293,7 @@
 
   <!-- Rodapé -->
   <footer class="rodape">
-    CNPJ:  59.711.008/0001-09 Deus Fiel
+    CNPJ: 31.725.749/0001-00  Deus Fiel
   </footer>
 
 </body>

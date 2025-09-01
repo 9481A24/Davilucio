@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -40,34 +39,19 @@
       text-align: center;
     }
 
-    .frase-impacto {
-      font-size: 1.7em;
-      font-weight: bold;
-      margin-bottom: 40px;
-      max-width: 700px;
+    /* Títulos centralizados e responsivos */
+    .titulos-pacotes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* permite quebrar linha se faltar espaço */
+      gap: 20px; /* distancia entre os títulos */
+      margin-bottom: 50px;
     }
 
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.6em;
-      line-height: 2.2em;
-      margin-bottom: 40px;
-    }
-
-    ul li::before {
-      content: "✔️ ";
-    }
-
-    ul li {
-      text-align: left;
-      max-width: 700px;
-      margin: 0 auto 10px;
+    .titulos-pacotes h1 {
+      font-size: clamp(2em, 6vw, 3em); /* cresce e diminui conforme tela */
+      margin: 0;
+      text-align: center;
     }
 
     .galeria {
@@ -216,6 +200,34 @@
       border-radius: 4px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
+
+    /* CSS Pacote Básico */
+    .pacote {
+      max-width: 700px;
+      margin: 20px auto 40px;
+      padding: 20px;
+      background-color: rgba(0, 128, 0, 0.4);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+
+    .pacote h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .pacote ul li {
+      text-align: left;
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+
+    .pacote p {
+      margin-top: 10px;
+      font-size: 1.4em;
+    }
   </style>
 </head>
 <body>
@@ -223,19 +235,26 @@
   <nav>davi filho azulejista</nav>
 
   <main>
-    <div class="frase-impacto">
-      Funcionalidade, elegância e personalização sob medida para o seu lar.
+
+    <!-- Títulos Pacotes juntos e responsivos -->
+    <div class="titulos-pacotes">
+      <h1>Pacote Serviços</h1>
+      <h1>Maridos Aluguel</h1>
     </div>
 
-    <h1>Pacotes Serviços</h1>
-    <h1>Maridos Aluguel<h1/>
-    <ul>
-      <li>Eletricista</li>
-      <li>Bombeiro Hidraulico</li>
-      <li>gesseiro</li>
-      <li>pintor</li>
-    </ul>
+    <!-- Pacote Básico -->
+    <div class="pacote">
+      <h2>🔧 Pacote Básico – R$250/mês</h2>
+      <ul>
+        <li>1 visita mensal (até 2 horas de serviços)</li>
+        <li>Troca de lâmpadas e tomadas</li>
+        <li>Pequenos reparos hidráulicos (torneira pingando, sifão, registros)</li>
+        <li>Ajustes simples em portas, janelas e móveis</li>
+      </ul>
+      <p>👉 Ideal para quem precisa de manutenção leve e periódica.</p>
+    </div>
 
+    <!-- Galeria -->
     <div class="galeria">
       <img src="https://raw.githubusercontent.com/9481A24/Reyazulejista/main/download%20(1).jpeg" alt="Cozinha planejada" />
       <img src="https://raw.githubusercontent.com/9481A24/Reyazulejista/main/download%20(1).jpeg" alt="Armário planejado" />
@@ -243,6 +262,7 @@
       <img src="https://raw.githubusercontent.com/9481A24/Reyazulejista/main/download%20(2).jpeg" alt="Painel e móveis de sala" />
     </div>
 
+    <!-- Comentários -->
     <div class="comentarios-container">
       <div class="comentario">
         <p>“Ficamos encantados com o projeto da cozinha! Cada detalhe pensado para o nosso espaço.”</p>
@@ -268,12 +288,12 @@
     </div>
   </main>
 
-  <!-- Botão WhatsApp com efeito onda -->
+  <!-- Botão WhatsApp -->
   <a class="whatsapp-btn" href="https://wa.me/5531996126215" target="_blank" aria-label="WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
   </a>
 
-  <!-- Rodapé com CNPJ -->
+  <!-- Rodapé -->
   <footer class="rodape">
     CNPJ: 31.725.749/0001-00  Deus Fiel
   </footer>
